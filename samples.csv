@@ -1,1 +1,29 @@
-SPECIES,STRAIN,PHYLUM,BIOPROJECT,BIOSAMPLE,SRA,LOCUS
+SPECIES,STRAIN,PHYLUM,BIOPROJECT,BIOSAMPLE,LOCUS
+Rhodotorula mucilaginosa,IIF6SW-B1,Basidiomycota,PRJNA625575,SAMN14603657,IIF6SWB1
+Rhodotorula mucilaginosa,IIF2SW-F1,Basidiomycota,PRJNA625575,SAMN14603668,IIF2SWF1
+Rhodotorula mucilaginosa,IIF4SW-F1,Basidiomycota,PRJNA625575,SAMN14603669,IIF4SWF1
+Rhodotorula mucilaginosa,IIF6SW-F1,Basidiomycota,PRJNA625575,SAMN14603673,IIF6SWF1
+Rhodotorula mucilaginosa,IIF5SW-F2,Basidiomycota,PRJNA625575,SAMN14603670,IIF5SWF2
+Rhodotorula mucilaginosa,IF6SW-B2,Basidiomycota,PRJNA625575,SAMN14603653,IF6SWB2
+Rhodotorula mucilaginosa,IF1SW-B1,Basidiomycota,PRJNA625575,SAMN14603650,IF1SWB1
+Rhodotorula mucilaginosa,IF4SW-B2,Basidiomycota,PRJNA625575,SAMN14603652,IF4SWB2
+Rhodotorula mucilaginosa,IF4SW-B1,Basidiomycota,PRJNA625575,SAMN14603651,IF4SWB1
+Rhodotorula mucilaginosa,IF7SW-B3,Basidiomycota,PRJNA625575,SAMN14603654,IF7SWB3
+Rhodotorula mucilaginosa,IF8SW-B2,Basidiomycota,PRJNA625575,SAMN14603655,IF8SWB2
+Rhodotorula mucilaginosa,IF8SW-P2,Basidiomycota,PRJNA625575,SAMN14603656,IF8SWP2
+Rhodotorula mucilaginosa,IIF6SW-B2,Basidiomycota,PRJNA625575,SAMN14603658,IIF6SWB2
+Rhodotorula mucilaginosa,IIF8SW-B2,Basidiomycota,PRJNA625575,SAMN14603659,IIF8SWB2
+Rhodotorula mucilaginosa,IIF8SW-B3,Basidiomycota,PRJNA625575,SAMN14603660,IIF8SWB3
+Rhodotorula mucilaginosa,IIF2*SW-B1,Basidiomycota,PRJNA625575,SAMN14603661,IIF2xSWB1
+Rhodotorula mucilaginosa,IF1SW-F2,Basidiomycota,PRJNA625575,SAMN14603662,IF1SWF2
+Rhodotorula mucilaginosa,IF4SW-F2,Basidiomycota,PRJNA625575,SAMN14603664,IF4SWF2
+Rhodotorula mucilaginosa,IF3SW-F2,Basidiomycota,PRJNA625575,SAMN14603663,IF3SWF2
+Rhodotorula mucilaginosa,IIF1SW-F1,Basidiomycota,PRJNA625575,SAMN14603667,IIF1SWF1
+Rhodotorula mucilaginosa,IF6SW-F1,Basidiomycota,PRJNA625575,SAMN14603666,IF6SWF1
+Rhodotorula mucilaginosa,IF5SW-F1,Basidiomycota,PRJNA625575,SAMN14603665,IF5SWF1
+Rhodotorula mucilaginosa,IIF8SW-F1,Basidiomycota,PRJNA625575,SAMN14603671,IIF8SWF1
+Rhodotorula mucilaginosa,IIF2*SW-F1,Basidiomycota,PRJNA625575,SAMN14603672,IIF2xSWF1
+Rhodotorula mucilaginosa,IFCSG-B1,Basidiomycota,PRJNA625575,SAMN14603675,IFCSGB1
+Rhodotorula mucilaginosa,IIFCSW-F1,Basidiomycota,PRJNA625575,SAMN14603674,IIFCSWF1
+Rhodotorula mucilaginosa,IF1SG-B1,Basidiomycota,PRJNA625575,SAMN14603676,IF1SGB1
+Rhodotorula mucilaginosa,IF3SG-B1,Basidiomycota,PRJNA625575,SAMN14603677,IF3SGB1
