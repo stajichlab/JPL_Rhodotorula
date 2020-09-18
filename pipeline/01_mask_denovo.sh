@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH -p batch --time 2-0:00:00 --ntasks 8 --nodes 1 --mem 24G --out logs/mask.%a.log
 
+# denovo
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then
     CPU=$SLURM_CPUS_ON_NODE
@@ -29,7 +30,7 @@ if [ $N -gt $(expr $MAX) ]; then
 fi
 
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOPROJECT BIOSAMPLE SRA LOCUS
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOPROJECT BIOSAMPLE LOCUS
 do
   name=$(echo -n ${SPECIES}_${STRAIN} | perl -p -e 's/\s+/_/g')
   if [ ! -f $INDIR/${name}.sorted.fasta ]; then
@@ -37,7 +38,7 @@ do
      exit
   fi
   echo "$name"
-  
+
   if [ ! -f $OUTDIR/${name}.masked.fasta ]; then
      module unload perl
      module unload python
