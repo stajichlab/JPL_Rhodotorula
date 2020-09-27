@@ -13,7 +13,7 @@ if [ ! -z $SLURM_CPUS_ON_NODE ]; then
   CPU=$SLURM_CPUS_ON_NODE
 fi
 OUTDIR=annotate
-SAMPFILE=samples.csv
+SAMPFILE=samples2.csv
 N=${SLURM_ARRAY_TASK_ID}
 if [ ! $N ]; then
   N=$1
@@ -29,7 +29,7 @@ if [ $N -gt $MAX ]; then
   exit
 fi
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read BASE SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
 do
   BASE=$(echo -n "$SPECIES $STRAIN" | perl -p -e 's/\s+/_/g')
   name=$BASE

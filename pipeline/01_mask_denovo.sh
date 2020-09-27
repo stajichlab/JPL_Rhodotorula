@@ -12,7 +12,7 @@ OUTDIR=genomes
 
 mkdir -p repeat_library
 
-SAMPFILE=samples.csv
+SAMPFILE=samples2.csv
 N=${SLURM_ARRAY_TASK_ID}
 
 if [ ! $N ]; then
@@ -30,7 +30,7 @@ if [ $N -gt $(expr $MAX) ]; then
 fi
 
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOPROJECT BIOSAMPLE LOCUS
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read BASER SPECIES STRAIN PHYLUM BIOPROJECT BIOSAMPLE LOCUS
 do
   name=$(echo -n ${SPECIES}_${STRAIN} | perl -p -e 's/\s+/_/g')
   if [ ! -f $INDIR/${name}.sorted.fasta ]; then

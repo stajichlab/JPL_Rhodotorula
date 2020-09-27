@@ -16,7 +16,7 @@ export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 CPUS=$SLURM_CPUS_ON_NODE
 OUTDIR=annotate
 INDIR=genomes
-SAMPFILE=samples.csv
+SAMPFILE=samples2.csv
 BUSCO=fungi_odb10
 
 if [ -z $CPUS ]; then
@@ -39,7 +39,7 @@ if [ $N -gt $MAX ]; then
   exit
 fi
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read BASER SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
 do
   BASE=$(echo -n "$SPECIES $STRAIN" | perl -p -e 's/\s+/_/g')
   STRAIN_NOSPACE=$(echo -n "$STRAIN" | perl -p -e 's/\s+/_/g')
@@ -49,7 +49,7 @@ do
     echo "Cannot find $BASE.masked.fasta in $INDIR - may not have been run yet"
     exit
   fi
-  TEMPLATE=$(realpath lib/sbt/$STRAIN_NOSPACE.sbt)
+  TEMPLATE=$(realpath lib/Rhodotorula.sbt)
   if [ ! -f $TEMPLATE ]; then
     echo "NO TEMPLATE for $name"
     exit

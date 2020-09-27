@@ -21,7 +21,7 @@ fi
 
 INDIR=genomes
 OUTDIR=annotate
-SAMPFILE=strains.csv
+SAMPFILE=samples2.csv
 
 N=${SLURM_ARRAY_TASK_ID}
 
@@ -42,11 +42,12 @@ if [ $N -gt $MAX ]; then
 fi
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 export PASACONF=$HOME/pasa.config.txt
-SBT=$(realpath lib/authors.sbt) # this can be changed
+SBT=$(realpath lib/Rhodotorula.sbt) # this can be changed
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read BASE SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
 do
 	#  if you want to use sqlite remove the mysql
 	#  funannotate update --cpus $CPU -i $OUTDIR/$BASE --out $OUTDIR/$BASE --sbt $SBT --memory $MEM
-  funannotate update --cpus $CPU -i $OUTDIR/$BASE --out $OUTDIR/$BASE --sbt $SBT --memory $MEM --pasa_db mysql
+	# --trinity $OUTDIR/$BASE/training/trinity.fasta
+  funannotate update --cpus $CPU -i $OUTDIR/$BASE/predict_results/*.gbk --out $OUTDIR/$BASE --sbt $SBT --memory $MEM 
 done

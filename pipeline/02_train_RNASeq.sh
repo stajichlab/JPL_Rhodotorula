@@ -40,9 +40,9 @@ fi
 ODIR=annotate
 INDIR=genomes
 RNAFOLDER=lib/RNASeq
-SAMPLEFILE=samples.csv
+SAMPLEFILE=samples2.csv
 IFS=,
-tail -n +2 $SAMPLEFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
+tail -n +2 $SAMPLEFILE | sed -n ${N}p | while read BASER SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
 do
     echo "SPECIES is $SPECIES"
     SPECIESNOSPACE=$(echo -n "$SPECIES" | perl -p -e 's/\s+/_/g')
@@ -61,6 +61,6 @@ do
     echo $ODIR/$BASE/training
     funannotate train -i $MASKED -o $ODIR/$BASE \
    	--jaccard_clip --species "$SPECIES" --isolate $STRAIN \
-  	--cpus $CPUS --memory $MEM --pasa_db mysql \
+  	--cpus $CPUS --memory $MEM \
   	--left $RNAFOLDER/$SPECIESNOSPACE/Forward.fq.gz --right $RNAFOLDER/$SPECIESNOSPACE/Reverse.fq.gz
 done
